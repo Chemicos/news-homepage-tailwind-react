@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import ExtraNews from "./components/ExtraNews";
+import Navigation from "./components/Navigation";
+import News from "./components/News";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='min-h-screen flex flex-col justify-center items-center pt-8 md:p-0'>
+      <div className='px-4 md:px-0  md:max-w-correct-width'>
+        <Navigation />   
+        <News /> 
+        <ExtraNews />   
+      </div>
+    </main>
   );
 }
-
-export default App;
